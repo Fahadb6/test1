@@ -1,0 +1,19 @@
+---
+kind: wasmer.io/App.v0
+owner: firecraft676
+name: staticfile
+package: .
+cli_args:
+  - /src/main.py
+env:
+  PYTHONEXECUTABLE: "/bin/python"
+  PORT: "80"
+  ZILL_HOST: "127.0.0.1"
+  ZILL_ENV: "demo"
+  ZILL_DEMO_CREDENTIALS: "shared"
+  ZILL_DB: "/data/zill.sqlite3"
+  ZILL_DEMO_CREDENTIAL_FILE: "/data/DEMO_ACCESS_LOCAL.txt"
+  ZILL_SINGLE_THREAD: "1"
+volumes:
+  - name: zill-demo-data
+    mount: /data
